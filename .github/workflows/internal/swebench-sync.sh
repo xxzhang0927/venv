@@ -16,7 +16,6 @@ echo "Batch ${batch}: syncing images ${start} to $((end - 1)) of ${total}"
 for (( i=start; i<end; i++ )); do
   img="${images[$i]}"
   echo "[$((i+1))/${total}] Syncing swebench/${img} ..."
-  echo "skopeo copy \"docker://${img}\" \"docker://acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/${img}\" --dest-creds=\"${DEST_CREDS}\""
   skopeo copy "docker://${img}" \
     "docker://acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/${img}" \
     --dest-creds="${DEST_CREDS}" || echo "WARN: failed to sync ${img}, continuing..."
