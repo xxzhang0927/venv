@@ -1,0 +1,1 @@
+skopeo copy docker://swebench/sweb.eval.x86_64.astropy_1776_astropy-12907 docker://acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/swebench/sweb.eval.x86_64.astropy_1776_astropy-12907 --dest-creds=iflytek_ccr_aiaas:Y22wUv5MWrfb

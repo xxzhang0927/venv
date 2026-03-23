@@ -1,0 +1,22 @@
+name: swebench
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  swebench_to_alihz:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/workflows/internal
+          sparse-checkout-cone-mode: false
+      - name: Sync SWE-bench Docker Images
+        env:
+          BATCH: ${{ matrix.batch }}
+          DEST_CREDS: ${{ secrets.ALIYUN_USERNAME }}:${{ secrets.ALIYUN_PASSWORD }}
+        run: bash .github/workflows/internal/swebench-sync.sh
