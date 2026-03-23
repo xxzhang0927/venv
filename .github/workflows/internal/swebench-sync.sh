@@ -19,3 +19,4 @@ for (( i=start; i<end; i++ )); do
   skopeo copy "docker://${img}" \
     "docker://acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/${img}" \
     --dest-creds="${DEST_CREDS}" || echo "WARN: failed to sync ${img}, continuing..."
+done
