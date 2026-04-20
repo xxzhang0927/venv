@@ -1,1 +1,7 @@
-
+python:3.13-slim-bookworm
+ubuntu:24.04 
+python:3.11-slim 
+python:3.10-slim-bookworm
+debian:bullseye-slim 
+debian:13.0-slim
+python:3.11 
