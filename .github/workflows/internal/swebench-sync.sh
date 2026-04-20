@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-mapfile -t images < .github/workflows/internal/swebench-images.txt
+mapfile -t images < .github/workflows/internal/images.txt
 
 total=${#images[@]}
 batch=${BATCH:?}
