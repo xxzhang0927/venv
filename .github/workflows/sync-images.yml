@@ -9,16 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "elasticsearch:8.11.3"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/elasticsearch:8.11.3"
-          - src: "mysql:8.0.39"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/mysql:8.0.39"
-          - src: "quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/minio:RELEASE.2025-06-13T11-33-47Z"
-          - src: "valkey/valkey:8"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/valkey:8"
-          - src: "kibana:8.11.3"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/kibana:8.11.3"
+          - src: "quay.io/repository/ascend/verl:verl-8.5.0-910b-ubuntu22.04-py3.11-v0.7.1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/verl:verl-8.5.0-910b-ubuntu22.04-py3.11-v0.7.1"
     steps:
       - name: Sync Docker Images
         run: |
