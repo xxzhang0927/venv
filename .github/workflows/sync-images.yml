@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "ascend/verl:verl-8.5.0-910b-ubuntu22.04-py3.11-v0.7.1"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/verl:verl-8.5.0-910b-ubuntu22.04-py3.11-v0.7.1"
+          - src: "pgsty/minio:RELEASE.2026-03-25T00-00-00Z"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/pgsty/minio:RELEASE.2026-03-25T00-00-00Z"
     steps:
       - name: Sync Docker Images
         run: |
