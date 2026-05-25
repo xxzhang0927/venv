@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "pgsty/minio:RELEASE.2026-03-25T00-00-00Z"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/pgsty/minio:RELEASE.2026-03-25T00-00-00Z"
+          - src: "lmsysorg/sglang:latest"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/lmsysorg/sglang:latest"
     steps:
       - name: Sync Docker Images
         run: |
