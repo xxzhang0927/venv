@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "lmsysorg/sglang:latest"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/lmsysorg/sglang:latest"
+          - src: "verlai/verl:vllm020.dev1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/verlai/verl:vllm020.dev1"
     steps:
       - name: Sync Docker Images
         run: |
