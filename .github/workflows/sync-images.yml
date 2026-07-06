@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "verlai/verl:vllm020.dev1"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/verlai/verl:vllm020.dev1"
+          - src: "registry.k8s.io/lws/lws:v0.9.0"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/registry.k8s.io/lws/lws:v0.9.0"
     steps:
       - name: Sync Docker Images
         run: |
