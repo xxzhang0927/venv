@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "nginxinc/nginx-unprivileged:1.27"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/nginxinc/nginx-unprivileged:1.27"
+          - src: "gcr.io/kubebuilder/kube-rbac-proxy:v0.13.1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/kubebuilder/kube-rbac-proxy:v0.13.1"
     steps:
       - name: Sync Docker Images
         run: |
