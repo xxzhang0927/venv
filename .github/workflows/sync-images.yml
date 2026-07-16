@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "buildkit:buildx-stable-1"
+          - src: "registry-1.docker.io/v2/buildkit:buildx-stable-1"
             dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/buildkit:buildx-stable-1"
     steps:
       - name: Sync Docker Images
