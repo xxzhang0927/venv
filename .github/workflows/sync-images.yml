@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "hiyouga/llamafactory:0.9.5"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/hiyouga/llamafactory:0.9.5"
+          - src: "buildkit:buildx-stable-1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/buildkit:buildx-stable-1"
     steps:
       - name: Sync Docker Images
         run: |
