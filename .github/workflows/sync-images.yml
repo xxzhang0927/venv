@@ -10,7 +10,7 @@ jobs:
       matrix:
         include:
           - src: "docker.io/tonistiigi/binfmt"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/buildkit:buildx-stable-1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/tonistiigi/binfmt"
     steps:
       - name: Sync Docker Images
         run: |
