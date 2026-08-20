@@ -9,8 +9,12 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "docker.io/tonistiigi/binfmt"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/tonistiigi/binfmt"
+          - src: "registry.k8s.io/scheduler-plugins/controller:v0.27.8"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/scheduler-plugins/controller:v0.27.8"
+          - src: "registry.k8s.io/scheduler-plugins/kube-scheduler:v0.27.8"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/scheduler-plugins/kube-scheduler:v0.27.8"
+          - src: "registry.k8s.io/jobset/jobset:v0.2.0"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/jobset/jobset:v0.2.0"
     steps:
       - name: Sync Docker Images
         run: |
@@ -23,7 +27,7 @@ jobs:
               local dst_img=$2
 
               echo "Copying from source to destination..."
-              skopeo copy docker://"${src_img}" docker://"${dst_img}" \
+              skopeo copy --all docker://"${src_img}" docker://"${dst_img}" \
                   --dest-creds=${{ secrets.ALIYUN_USERNAME }}:${{ secrets.ALIYUN_PASSWORD }}
           }
 
