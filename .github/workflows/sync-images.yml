@@ -13,8 +13,8 @@ jobs:
             dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/scheduler-plugins/controller:v0.27.8"
           - src: "registry.k8s.io/scheduler-plugins/kube-scheduler:v0.27.8"
             dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/scheduler-plugins/kube-scheduler:v0.27.8"
-          - src: "registry.k8s.io/jobset/jobset:v0.2.0"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/jobset/jobset:v0.2.0"
+          - src: "registry.k8s.io/jobset/jobset:v0.5.0"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/jobset/jobset:v0.5.0"
     steps:
       - name: Sync Docker Images
         run: |
