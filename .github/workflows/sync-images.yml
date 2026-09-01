@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "hiyouga/llamafactory:latest"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/hiyouga/llamafactory:latest"
+          - src: "lmsysorg/sglang:nightly-dev-cu13-20260827-20621aa1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/lmsysorg/sglang:nightly-dev-cu13-20260827-20621aa1"
     steps:
       - name: Sync Docker Images
         run: |
