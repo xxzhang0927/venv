@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "lmsysorg/sglang:nightly-dev-cu13-20260827-20621aa1"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/lmsysorg/sglang:nightly-dev-cu13-20260827-20621aa1"
+          - src: "golang:1.16.10"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/golang:1.16.10"
     steps:
       - name: Sync Docker Images
         run: |
