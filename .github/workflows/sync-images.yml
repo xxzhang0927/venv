@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "alpine/k8s:1.30"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/bitnami/k8s:1.30"
+          - src: "alpine/k8s:1.30.3"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/bitnami/k8s:1.30.3"
           - src: "curlimages/curl:8.9.1"
             dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/curlimages/curl:8.9.1"
     steps:
