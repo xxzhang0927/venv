@@ -9,8 +9,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - src: "arm64v8/alpine:3.12"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/arm64v8/alpine:3.12"
+          - src: "bitnami/kubectl:1.30"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/bitnami/kubectl:1.30"
+          - src: "curlimages/curl:8.9.1"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/curlimages/curl:8.9.1"
     steps:
       - name: Sync Docker Images
         run: |
