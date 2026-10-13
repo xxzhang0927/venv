@@ -11,8 +11,8 @@ jobs:
         include:
           - src: "alpine/k8s:1.30.3"
             dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/bitnami/k8s:1.30.3"
-          - src: "hiyouga/llamafactory:latest-910b-ubuntu"
-            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/hiyouga/llamafactory:latest-910b-ubuntu"
+          - src: "golang:1.18.10-bullseye"
+            dst: "acr-maas-bj-registry.cn-beijing.cr.aliyuncs.com/maas/golang:1.18.10-bullseye"
     steps:
       - name: Sync Docker Images
         run: |
